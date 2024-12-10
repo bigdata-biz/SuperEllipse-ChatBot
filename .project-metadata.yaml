@@ -76,27 +76,27 @@ tasks:
     memory: 32
     gpu: 1
 
-  ## Step 4: Save Evaluations in Mlflow for traceability and reproducability
-  - type: run_session
-    name: Save evaluations in mlflow
-    entity_label: create_saveevaluations_session
-    script: 5_session-save-evaluations-in-mlflow/persist.py
-    short_summary: Log the evaluations in Mlflow
-    arguments: None
-    cpu: 2
-    memory: 4
+  # ## Step 4: Save Evaluations in Mlflow for traceability and reproducability
+  # - type: run_session
+  #   name: Save evaluations in mlflow
+  #   entity_label: create_saveevaluations_session
+  #   script: 5_session-save-evaluations-in-mlflow/persist.py
+  #   short_summary: Log the evaluations in Mlflow
+  #   arguments: None
+  #   cpu: 2
+  #   memory: 4
 
-  ## Step 5:  Run Tru lens Evaluation Dashboard
-  - type: start_application
-    name: LLM Evaluation using the Trulens Dashboard
-    short_summary: Use Trulens to evaluate our LLM based on the evaluation questions in assets/data/questions/evaluation_questions.txt.
-    long_summary: We use the RAG Triad of Relevance, Groundednes and Context Relevance explained in the README to evaluate our LLM.
-    subdomain: eval-dashboard
-    script: 4_app-run-evaluation-dashboard/app.py
-    cpu: 3
-    memory: 4
-    environment_variables:
-      TASK_TYPE: START_APPLICATION
+  # ## Step 5:  Run Tru lens Evaluation Dashboard
+  # - type: start_application
+  #   name: LLM Evaluation using the Trulens Dashboard
+  #   short_summary: Use Trulens to evaluate our LLM based on the evaluation questions in assets/data/questions/evaluation_questions.txt.
+  #   long_summary: We use the RAG Triad of Relevance, Groundednes and Context Relevance explained in the README to evaluate our LLM.
+  #   subdomain: eval-dashboard
+  #   script: 4_app-run-evaluation-dashboard/app.py
+  #   cpu: 3
+  #   memory: 4
+  #   environment_variables:
+  #     TASK_TYPE: START_APPLICATION
 
   ## Step 5:  Run WealthE
   - type: start_application
