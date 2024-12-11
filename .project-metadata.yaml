@@ -67,14 +67,14 @@ tasks:
     memory: 4
 
   ## Step 3 : Build the Evaluations dashboard
-  - type: run_session
-    name: LLM Evaluation using the Trulens Dashboard
-    short_summary: Use Trulens to evaluate our LLM based on the evaluation questions in assets/data/questions/evaluation_questions.txt.
-    long_summary: We use the RAG Triad of Relevance, Groundednes and Context Relevance explained in the README to evaluate our LLM.
-    script: 3_session-evaluate-llm/evaluation.py
-    cpu: 8
-    memory: 32
-    gpu: 1
+  # - type: run_session
+  #  name: LLM Evaluation using the Trulens Dashboard
+  #  short_summary: Use Trulens to evaluate our LLM based on the evaluation questions in assets/data/questions/evaluation_questions.txt.
+  #  long_summary: We use the RAG Triad of Relevance, Groundednes and Context Relevance explained in the README to evaluate our LLM.
+  #  script: 3_session-evaluate-llm/evaluation.py
+  #  cpu: 8
+  #  memory: 32
+  #  gpu: 1
 
   # ## Step 4: Save Evaluations in Mlflow for traceability and reproducability
   # - type: run_session
